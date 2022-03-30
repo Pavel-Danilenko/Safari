@@ -1,0 +1,57 @@
+.menu__burger {
+  z-index: 5;
+  position: absolute;
+  width: 30px;
+  height: 16px;
+  cursor: pointer;
+  top: 50px;
+}
+
+.menu__burger::after,
+.menu__burger::before,
+.menu__burger span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu__burger::after,
+.menu__burger::before {
+  content: '';
+}
+
+.menu__burger::after {
+  top: 0;
+}
+
+.menu__burger::before {
+  bottom: 0;
+}
+
+.menu__burger span {
+  width: 100%;
+  top: 50%;
+  -webkit-transform: scale(1) translate(0px, -50%);
+          transform: scale(1) translate(0px, -50%);
+}
+
+.menu__burger.active span {
+  -webkit-transform: scale(0) translate(0px, -50%);
+          transform: scale(0) translate(0px, -50%);
+}
+
+.menu__burger.active::before {
+  bottom: 50%;
+  -webkit-transform: rotate(45deg) translate(0px, 50%);
+          transform: rotate(45deg) translate(0px, 50%);
+}
+
+.menu__burger.active::after {
+  top: 50%;
+  -webkit-transform: rotate(-45deg) translate(0px, -50%);
+          transform: rotate(-45deg) translate(0px, -50%);
+}
+/*# sourceMappingURL=burger.css.map */
